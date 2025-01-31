@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Left Section - Student Registration Form -->
+            <div class="form-section">
+                <h2>Manage Students</h2>
+                <label>Serial No:</label>
+                <input type="text" id="serialNo">
+                
+                <label>Name:</label>
+                <input type="text" id="name">
+                
+                <label>Class:</label>
+                <input type="text" id="class">
+                
+                <label>Batch Name:</label>
+                <input type="text" id="batch">
+                
+                <label>Payment Date:</label>
+                <input type="date" id="paymentDate">
+                
+                <label>Mobile:</label>
+                <input type="text" id="mobile">
+                
+                <label>Pay Amount:</label>
+                <input type="text" id="payAmount">
+                
+                <button onclick="addStudent()">Add</button>
+                <button onclick="updateStudent()">Update</button>
+                <button onclick="deleteStudent()">Delete</button>
+            </div>
+
+            <!-- Right Section - Student List Table -->
+            <div class="table-section">
+                <h2>Student List</h2>
+                <input type="text" id="search" placeholder="Search by name..." onkeyup="searchStudent()">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Serial No</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Batch</th>
+                            <th>Admit Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable">
+                        <!-- Dynamic Student Data Here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Developed by Your Name</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
